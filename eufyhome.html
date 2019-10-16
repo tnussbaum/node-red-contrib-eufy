@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    RED.nodes.registerType('eufy-home',{
+        category: 'output',
+        color: '#21ccbf',
+        credentials: {
+            username: {type:"text"},
+            password: {type:"password"}
+        },
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:0,
+        align: "right",
+        icon: "eufy-logo.png",
+        label: function() {
+            return this.name||"eufy-home";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="eufy-home">
+    <div class="form-row">
+        <label for="node-input-username"><i class="icon-tag"></i> Username</label>
+        <input type="text" id="node-input-username" placeholder="someone@example.com">
+    </div>
+    <div class="form-row">
+        <label for="node-input-password"><i class="icon-tag"></i> Password</label>
+        <input type="password" id="node-input-password" placeholder="">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Device Name</label>
+        <input type="text" id="node-input-name" placeholder="Device Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="eufy-home">
+    <p>Node to support Anker Eufy Home switches and smart plugs</p>
+</script>
